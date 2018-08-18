@@ -36,8 +36,12 @@ const CLIPBOARD_TYPE = St.ClipboardType.CLIPBOARD;
  * - skin tone management
  * - gender management
  */
-const EMOJIS_CHARACTERS = Me.imports.emojisCharacters.ALL;
-const EMOJIS_KEYWORDS = Me.imports.emojisKeywords.ALL_KEYWORDS;
+//const EMOJIS_CHARACTERS = Me.imports.emojisCharacters.ALL;
+//const EMOJIS_KEYWORDS = Me.imports.emojisKeywords.ALL_KEYWORDS;
+const EMOJIS = Me.imports.emojis.emojis;
+let EMOJIS_CHARACTERS = [[],[],[],[],[],[],[],[],[],[]];
+let EMOJIS_KEYWORDS = [[],[],[],[],[],[],[],[],[],[]];
+
 
 //				none	woman					man
 const GENDERS =	['',	'\u200D\u2640\uFE0F',	'\u200D\u2642\uFE0F'];
@@ -739,7 +743,7 @@ const EmojisMenu = new Lang.Class({
 		this.emojiCategories[6] = new EmojiCategory(	_('Objects'),				'alarm-symbolic',					6	);
 		this.emojiCategories[7] = new EmojiCategory(	_('Symbols'),				'emblem-default-symbolic',			7	);
 		this.emojiCategories[8] = new EmojiCategory(	_('Flags'),					'flag-symbolic',					8	);
-		this.emojiCategories[9] = new EmojiCategory(	_('Git'),					'accessories-text-editor-symbolic',	9	);
+		//this.emojiCategories[9] = new EmojiCategory(	_('Git'),					'accessories-text-editor-symbolic',	9	);
 	},
 	
 	_addAllCategories: function() {
@@ -918,7 +922,47 @@ function init() {
 let SETTINGS;
 let SIGNAUX = [];
 
-function enable() {	
+function enable() {
+	for (let i = 0; i < 113; i++) {
+	    EMOJIS_CHARACTERS[0].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[0].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 113; i < 475; i++) {
+	    EMOJIS_CHARACTERS[1].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[1].push(EMOJIS[i].keywords.split(" | "));
+	}
+	/*for (let i = 475; i < 481; i++) {
+	    EMOJIS_CHARACTERS[2].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[2].push(EMOJIS[i].keywords.split(" | "));
+	}*/
+	for (let i = 481; i < 601; i++) {
+	    EMOJIS_CHARACTERS[2].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[2].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 601; i < 713; i++) {
+	    EMOJIS_CHARACTERS[3].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[3].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 713; i < 915; i++) {
+	    EMOJIS_CHARACTERS[4].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[4].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 915; i < 991; i++) {
+	    EMOJIS_CHARACTERS[5].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[5].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 991; i < 1172; i++) {
+	    EMOJIS_CHARACTERS[6].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[6].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 1172; i < 1376; i++) {
+	    EMOJIS_CHARACTERS[7].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[7].push(EMOJIS[i].keywords.split(" | "));
+	}
+	for (let i = 1376; i < 1644; i++) {
+	    EMOJIS_CHARACTERS[8].push(EMOJIS[i].char);
+	    EMOJIS_KEYWORDS[8].push(EMOJIS[i].keywords.split(" | "));
+	}
 	SETTINGS = Convenience.getSettings();
 	
 	/* TODO paramètres restants à dynamiser
