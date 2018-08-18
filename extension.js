@@ -925,43 +925,63 @@ let SIGNAUX = [];
 function enable() {
 	for (let i = 0; i < 113; i++) {
 	    EMOJIS_CHARACTERS[0].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[0].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[0].push(keywords);
 	}
 	for (let i = 113; i < 475; i++) {
 	    EMOJIS_CHARACTERS[1].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[1].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[1].push(keywords);
 	}
 	/*for (let i = 475; i < 481; i++) {
 	    EMOJIS_CHARACTERS[2].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[2].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[2].push(keywords);
 	}*/
 	for (let i = 481; i < 601; i++) {
 	    EMOJIS_CHARACTERS[2].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[2].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[2].push(keywords);
 	}
 	for (let i = 601; i < 713; i++) {
 	    EMOJIS_CHARACTERS[3].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[3].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[3].push(keywords);
 	}
 	for (let i = 713; i < 915; i++) {
 	    EMOJIS_CHARACTERS[4].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[4].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[4].push(keywords);
 	}
 	for (let i = 915; i < 991; i++) {
 	    EMOJIS_CHARACTERS[5].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[5].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[5].push(keywords);
 	}
 	for (let i = 991; i < 1172; i++) {
 	    EMOJIS_CHARACTERS[6].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[6].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[6].push(keywords);
 	}
 	for (let i = 1172; i < 1376; i++) {
 	    EMOJIS_CHARACTERS[7].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[7].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[7].push(keywords);
 	}
 	for (let i = 1376; i < 1644; i++) {
 	    EMOJIS_CHARACTERS[8].push(EMOJIS[i].char);
-	    EMOJIS_KEYWORDS[8].push(EMOJIS[i].keywords.split(" | "));
+	    let keywords = EMOJIS[i].keywords.split(" | ");
+	    keywords.unshift(EMOJIS[i].name);
+	    EMOJIS_KEYWORDS[8].push(keywords);
 	}
 	SETTINGS = Convenience.getSettings();
 	
